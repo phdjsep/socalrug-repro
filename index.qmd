@@ -1,0 +1,89 @@
+---
+format: 
+  revealjs:
+    theme: ["theme/q-theme.scss"]
+    slide-number: c/t
+    footer: "[https://sepd.dev](https://sepd.dev)"
+    code-copy: true
+    center-title-slide: false
+    include-in-header: heading-meta.html
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    height: 1080
+    width: 1920
+execute: 
+  eval: true
+  echo: true
+---
+
+<h1> Version Control, {renv}, and Reproducibility </h1>
+
+<hr>
+
+<h3> Sep Dadsetan, PhD - Executive Director, RWD Tech at </h3>
+
+<h3> 2023-08-15 </h3>
+<br>
+
+<h3> `r fontawesome::fa("linkedin", "black")` &nbsp; [linkedin.com/in/sepdadsetan/](https://www.linkedin.com/in/sepdadsetan/)
+
+![](renv_hex.png){.absolute top=425 left=1300 width="300"}
+![](github_hex.png){.absolute top=680 left=1450 width="300"}
+
+![](logo-dark.svg){.absolute top=268 left=1250 height="65"}
+
+## Introduction (5 mins)
+
+- Brief introduction to the talk
+
+> Hello everyone, my name is Sep Dadsetan and I've been invited here to speak about version control and reproducibility. My main hope with today's presentation is to highlight the value that version control and reproducibility has for you, your team, and your company.
+
+- Overview of today's agenda
+
+> Just a heads up that these topics can't be sufficiently covered in one hour, but what we'll attempt to do is grease the wheels and get exposed to some important concepts. 
+
+  - Importance of Version Control
+  - Dive into Git
+  - Intro to `renv`
+  - Working with `renv`
+
+- A little about your background/experience
+
+> As a little background, I'm a self-taught developer with analytics and software development experience in the life sciences and clinical domain.
+
+## Section 1: Importance of Version Control (10 mins)
+
+- Explanation of Version Control
+- Importance and benefits of Version Control in software development
+- Brief history of Version Control Systems
+
+## Section 2: Dive into Git (15 mins)
+
+- Introduction to Git as a distributed version control system
+- Basic commands and workflow (clone, add, commit, push, pull)
+- Branching and merging in Git
+- Demonstration with a simple project
+
+## Section 3: Introduction to Renv (10 mins)
+
+- Explanation of Renv - what it is and why it's needed
+- Understanding the problem of package dependencies in R
+- The concept of an isolated, reproducible R environment
+
+## Section 4: Working with Renv (15 mins)
+
+- Installation and setup of Renv
+- Creating and managing R environments
+- How to use Renv with a version control system (Git)
+- Demonstration with a real-world R project
+
+## Conclusion (5 mins)
+
+- Recap of Version Control and Renv
+- The synergy between Version Control and Renv in maintaining reproducible code
+- Q&A and closing remarks
+
+## The End
+```{r, eval=FALSE,echo=FALSE}
+```

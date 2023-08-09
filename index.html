@@ -356,27 +356,76 @@ Sep Dadsetan, PhD - Executive Director, RWD Tech at
 <p><img data-src="renv_hex.png" class="absolute" style="top: 425px; left: 1300px; width: 300px; "><img data-src="github_hex.png" class="absolute" style="top: 680px; left: 1450px; width: 300px; "></p>
 <p><img data-src="logo-dark.svg" class="absolute" style="top: 268px; left: 1250px; height: 65px; "></p>
 </section><section id="introduction-5-mins" class="slide level2"><h2>Introduction (5 mins)</h2>
+<p>Overview of today’s agenda</p>
 <ul>
-<li>Brief introduction to the talk</li>
+<li>Importance of Version Control and Reproducibility</li>
+<li>Dive into git</li>
+<li>Intro to <code>renv</code>
+</li>
+<li>Working with <code>renv</code>
+</li>
 </ul>
-<blockquote>
-<p>Hello everyone, my name is Sep Dadsetan and I’ve been invited here to speak about version control and reproducibility. My main hope with today’s presentation is to highlight the value that version control and reproducibility has for you, your team, and your company.</p>
-</blockquote>
-<ul>
-<li>Overview of today’s agenda</li>
-<li>A little about your background/experience</li>
-</ul></section><section id="section-1-importance-of-version-control-10-mins" class="slide level2"><h2>Section 1: Importance of Version Control (10 mins)</h2>
-<ul>
-<li>Explanation of Version Control</li>
-<li>Importance and benefits of Version Control in software development</li>
-<li>Brief history of Version Control Systems</li>
-</ul></section><section id="section-2-dive-into-git-15-mins" class="slide level2"><h2>Section 2: Dive into Git (15 mins)</h2>
+<aside class="notes"><ul>
+<li><p>Hello everyone, my name is Sep Dadsetan and I’ve been invited here to speak about version control and reproducibility. My main hope with today’s presentation is to highlight the value that version control and reproducibility has for you, your team, and your company.</p></li>
+<li><p>Just a heads up that these topics can’t be sufficiently covered in one hour, but what we’ll attempt to do is grease the wheels and get exposed to some important concepts.</p></li>
+<li><p>As a little background, my formal education is in Genetics and Molecular Physiology, but I always had an interest in programming since high school. I’m mostly self-taught, but credit many of the amazing engineers I’ve had the pleasure of working with. My presentation today comes from real world experience in working in and with analytics/engineering teams, so I hope to highlight that perspective.</p></li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-1-importance-of-version-control-10-mins" class="slide level2"><h2>Section 1: Importance of Version Control (10 mins)</h2>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It’s a critical practice in software development and has become increasingly important in data science as well. Here’s why:</p>
+<h3 id="collaboration">1. Collaboration:</h3>
+<p>Data science often involves collaboration among multiple team members. Version control systems like Git allow multiple people to work on the same project simultaneously. They can make changes, submit them for review, and merge them into the main project without overwriting each other’s work.</p>
+<h3 id="reproducibility">2. Reproducibility:</h3>
+<p>In data science, it’s crucial to be able to reproduce results. By keeping track of the exact versions of code, data, and libraries used, version control helps ensure that experiments can be replicated precisely. This is vital for both validation of results and for future work that builds on previous findings.</p>
+<h3 id="experimentation">3. Experimentation:</h3>
+<p>Data scientists often need to try out different models, features, or hyperparameters. Version control allows them to create branches where they can experiment without affecting the main project. If an experiment is successful, it can be merged back into the main codebase; if not, it can be discarded without any mess.</p>
+<h3 id="accountability">4. Accountability:</h3>
+<p>Version control maintains a detailed log of who made what changes and when. This is essential for understanding the evolution of a project and can be crucial for regulatory compliance in some industries.</p>
+<h3 id="backup-and-recovery">5. Backup and Recovery:</h3>
+<p>Mistakes happen, and code can be lost or broken. Version control acts as a continuous backup, allowing you to revert to previous versions if something goes wrong. This can save hours or even days of work.</p>
+<h3 id="code-quality">6. Code Quality:</h3>
+<p>Through code reviews and the ability to track changes over time, version control can help maintain and improve the quality of the code. It encourages best practices and helps prevent “code rot” where code becomes unmaintained and outdated.</p>
+<h3 id="integration-with-other-tools">7. Integration with Other Tools:</h3>
+<p>Version control systems often integrate with other tools used in data science, such as continuous integration systems, project management tools, and code notebooks. This can streamline workflows and make the entire process more efficient.</p>
+<h3 id="conclusion">Conclusion:</h3>
+<p>Version control is not just a tool for software developers. It’s an essential part of modern data science, enabling collaboration, reproducibility, experimentation, and much more. By providing a structured way to manage changes, track history, and integrate with other tools, version control systems like Git help data scientists work more efficiently and effectively.</p>
+</section><section id="section-2-dive-into-git-15-mins" class="slide level2"><h2>Section 2: Dive into Git (15 mins)</h2>
 <ul>
 <li>Introduction to Git as a distributed version control system</li>
 <li>Basic commands and workflow (clone, add, commit, push, pull)</li>
 <li>Branching and merging in Git</li>
 <li>Demonstration with a simple project</li>
-</ul></section><section id="section-3-introduction-to-renv-10-mins" class="slide level2"><h2>Section 3: Introduction to Renv (10 mins)</h2>
+</ul></section><section id="git" class="slide level2"><h2>Git</h2>
+
+<img data-src="https://imgs.xkcd.com/comics/git.png" class="r-stretch"></section><section id="git-concepts-simplified" class="slide level2"><h2>Git Concepts Simplified</h2>
+<p>Imagine you’re working on a big puzzle with your friends, and you want to make sure that you can always go back to see how the puzzle looked at different stages. Version control is like taking a picture of the puzzle every time you add a few pieces.</p>
+<p>Here’s how it works:</p>
+<p>Starting the Puzzle (Repository): When you first open the puzzle box, that’s like starting a new project. In version control, this is called creating a “repository.” It’s the place where all the pictures of your puzzle will be stored.</p>
+<p>Adding Pieces (Commits): Every time you and your friends add some pieces to the puzzle and are happy with how it looks, you take a picture. In version control, this picture is called a “commit.” It’s a snapshot of how everything looks at that moment.</p>
+<p>Trying New Things (Branches): Sometimes, you might want to try putting together a part of the puzzle without messing up what you’ve already done. You can take the current picture and make a copy to work on. This is called a “branch.” If you like what you’ve done in the branch, you can add it back to the main puzzle. If not, you can just throw that copy away.</p>
+<p>Working with Friends (Collaboration): Version control lets you and your friends work on the puzzle together without getting in each other’s way. You can all take turns adding pieces and taking pictures, and if someone makes a mistake, you can always look at the previous pictures to see what went wrong.</p>
+<p>Going Back in Time (History): If you ever want to see how the puzzle looked at any earlier stage, you can look at the pictures you’ve taken along the way. This is the “history” in version control, and it lets you go back in time to see how things have changed.</p>
+<p>Keeping Everything Safe (Backup): If something happens to the puzzle, like if your little sibling messes it up, you still have all the pictures you’ve taken. You can use those pictures to put the puzzle back the way it was.</p>
+<p>So, version control is like a magical camera for your projects. It lets you take pictures of what you’re working on, try new things without worry, work with friends, and even go back in time if you need to. It’s a way to make sure that you can always see how your puzzle—or your project—has grown and changed.</p>
+</section><section id="basic-git-usage-and-concepts" class="slide level2"><h2>Basic Git Usage and Concepts</h2>
+<h3 id="adding-and-committing">Adding and Committing</h3>
+
+<img data-src="https://marklodato.github.io/visual-git-guide/basic-usage.svg" class="r-stretch quarto-figure-center"></section><section id="basic-git-usage-and-concepts-1" class="slide level2"><h2>Basic Git Usage and Concepts</h2>
+<h3 id="branching">Branching</h3>
+
+<img data-src="https://marklodato.github.io/visual-git-guide/conventions.svg" class="r-stretch quarto-figure-center"></section><section id="lets-get-our-hands-dirty" class="slide level2"><h2>Let’s get our hands dirty</h2>
+<p>If this is your first exposure to Git, I’ll say that it takes getting used to and the best way to do that is by using it.</p>
+<p>I’m going to “mimic” two different developers on screen so that you can see some basic git commands and how it might look within a team.</p>
+<p><code>git clone https://github.com/phdjsep/socalrug-repro</code></p>
+</section><section id="section-3-introduction-to-renv-10-mins" class="slide level2"><h2>Section 3: Introduction to Renv (10 mins)</h2>
 <ul>
 <li>Explanation of Renv - what it is and why it’s needed</li>
 <li>Understanding the problem of package dependencies in R</li>
@@ -392,7 +441,15 @@ Sep Dadsetan, PhD - Executive Director, RWD Tech at
 <li>Recap of Version Control and Renv</li>
 <li>The synergy between Version Control and Renv in maintaining reproducible code</li>
 <li>Q&amp;A and closing remarks</li>
-</ul></section><section id="the-end" class="slide level2"><h2>The End</h2>
+</ul></section><section id="helpful-resources" class="slide level2"><h2>Helpful Resources</h2>
+<ul>
+<li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Git Cheatsheet</a></li>
+<li><a href="https://rogerdudler.github.io/git-guide/">git - the simple guide</a></li>
+<li><a href="https://happygitwithr.com/">Happy Git and Github for the useR</a></li>
+<li>
+<a href="https://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a> ::: {.cell}</li>
+</ul>
+<p>:::</p>
 <div class="footer footer-default">
 <p><a href="https://sepd.dev">https://sepd.dev</a></p>
 </div>

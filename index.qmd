@@ -35,28 +35,48 @@ execute:
 
 ## Introduction (5 mins)
 
-- Brief introduction to the talk
+Overview of today's agenda
 
-> Hello everyone, my name is Sep Dadsetan and I've been invited here to speak about version control and reproducibility. My main hope with today's presentation is to highlight the value that version control and reproducibility has for you, your team, and your company.
-
-- Overview of today's agenda
-
-> Just a heads up that these topics can't be sufficiently covered in one hour, but what we'll attempt to do is grease the wheels and get exposed to some important concepts. 
-
-  - Importance of Version Control
-  - Dive into Git
+  - Importance of Version Control and Reproducibility
+  - Dive into git
   - Intro to `renv`
   - Working with `renv`
 
-- A little about your background/experience
+::: {.notes}
+- Hello everyone, my name is Sep Dadsetan and I've been invited here to speak about version control and reproducibility. My main hope with today's presentation is to highlight the value that version control and reproducibility has for you, your team, and your company.
 
-> As a little background, I'm a self-taught developer with analytics and software development experience in the life sciences and clinical domain.
+- Just a heads up that these topics can't be sufficiently covered in one hour, but what we'll attempt to do is grease the wheels and get exposed to some important concepts. 
+
+- As a little background, my formal education is in Genetics and Molecular Physiology, but I always had an interest in programming since high school. I'm mostly self-taught, but credit many of the amazing engineers I've had the pleasure of working with. My presentation today comes from real world experience in working in and with analytics/engineering teams, so I hope to highlight that perspective.
+:::
 
 ## Section 1: Importance of Version Control (10 mins)
 
-- Explanation of Version Control
-- Importance and benefits of Version Control in software development
-- Brief history of Version Control Systems
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It's a critical practice in software development and has become increasingly important in data science as well. Here's why:
+
+### 1. Collaboration:
+Data science often involves collaboration among multiple team members. Version control systems like Git allow multiple people to work on the same project simultaneously. They can make changes, submit them for review, and merge them into the main project without overwriting each other's work.
+
+### 2. Reproducibility:
+In data science, it's crucial to be able to reproduce results. By keeping track of the exact versions of code, data, and libraries used, version control helps ensure that experiments can be replicated precisely. This is vital for both validation of results and for future work that builds on previous findings.
+
+### 3. Experimentation:
+Data scientists often need to try out different models, features, or hyperparameters. Version control allows them to create branches where they can experiment without affecting the main project. If an experiment is successful, it can be merged back into the main codebase; if not, it can be discarded without any mess.
+
+### 4. Accountability:
+Version control maintains a detailed log of who made what changes and when. This is essential for understanding the evolution of a project and can be crucial for regulatory compliance in some industries.
+
+### 5. Backup and Recovery:
+Mistakes happen, and code can be lost or broken. Version control acts as a continuous backup, allowing you to revert to previous versions if something goes wrong. This can save hours or even days of work.
+
+### 6. Code Quality:
+Through code reviews and the ability to track changes over time, version control can help maintain and improve the quality of the code. It encourages best practices and helps prevent "code rot" where code becomes unmaintained and outdated.
+
+### 7. Integration with Other Tools:
+Version control systems often integrate with other tools used in data science, such as continuous integration systems, project management tools, and code notebooks. This can streamline workflows and make the entire process more efficient.
+
+### Conclusion:
+Version control is not just a tool for software developers. It's an essential part of modern data science, enabling collaboration, reproducibility, experimentation, and much more. By providing a structured way to manage changes, track history, and integrate with other tools, version control systems like Git help data scientists work more efficiently and effectively.
 
 ## Section 2: Dive into Git (15 mins)
 
@@ -64,6 +84,51 @@ execute:
 - Basic commands and workflow (clone, add, commit, push, pull)
 - Branching and merging in Git
 - Demonstration with a simple project
+
+## Git
+
+![](https://imgs.xkcd.com/comics/git.png)
+
+## Git Concepts Simplified
+
+Imagine you're working on a big puzzle with your friends, and you want to make sure that you can always go back to see how the puzzle looked at different stages. Version control is like taking a picture of the puzzle every time you add a few pieces.
+
+Here's how it works:
+
+Starting the Puzzle (Repository): When you first open the puzzle box, that's like starting a new project. In version control, this is called creating a "repository." It's the place where all the pictures of your puzzle will be stored.
+
+Adding Pieces (Commits): Every time you and your friends add some pieces to the puzzle and are happy with how it looks, you take a picture. In version control, this picture is called a "commit." It's a snapshot of how everything looks at that moment.
+
+Trying New Things (Branches): Sometimes, you might want to try putting together a part of the puzzle without messing up what you've already done. You can take the current picture and make a copy to work on. This is called a "branch." If you like what you've done in the branch, you can add it back to the main puzzle. If not, you can just throw that copy away.
+
+Working with Friends (Collaboration): Version control lets you and your friends work on the puzzle together without getting in each other's way. You can all take turns adding pieces and taking pictures, and if someone makes a mistake, you can always look at the previous pictures to see what went wrong.
+
+Going Back in Time (History): If you ever want to see how the puzzle looked at any earlier stage, you can look at the pictures you've taken along the way. This is the "history" in version control, and it lets you go back in time to see how things have changed.
+
+Keeping Everything Safe (Backup): If something happens to the puzzle, like if your little sibling messes it up, you still have all the pictures you've taken. You can use those pictures to put the puzzle back the way it was.
+
+So, version control is like a magical camera for your projects. It lets you take pictures of what you're working on, try new things without worry, work with friends, and even go back in time if you need to. It's a way to make sure that you can always see how your puzzle—or your project—has grown and changed.
+
+## Basic Git Usage and Concepts
+
+### Adding and Committing
+
+![](https://marklodato.github.io/visual-git-guide/basic-usage.svg){fig-align="center"}
+
+## Basic Git Usage and Concepts
+
+### Branching
+
+![](https://marklodato.github.io/visual-git-guide/conventions.svg){fig-align="center"}
+
+## Let's get our hands dirty
+
+If this is your first exposure to Git, I'll say that it takes getting used to and the best way to do that is by using it. 
+
+I'm going to "mimic" two different developers on screen so that you can see some basic git commands and how it might look within a team.
+
+```git clone https://github.com/phdjsep/socalrug-repro```
+
 
 ## Section 3: Introduction to Renv (10 mins)
 
@@ -84,6 +149,11 @@ execute:
 - The synergy between Version Control and Renv in maintaining reproducible code
 - Q&A and closing remarks
 
-## The End
+## Helpful Resources
+
+- [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+- [Happy Git and Github for the useR](https://happygitwithr.com/)
+- [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
 ```{r, eval=FALSE,echo=FALSE}
 ```

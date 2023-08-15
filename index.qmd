@@ -110,26 +110,38 @@ Here's how it works:
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**Repository**) - Starting the Puzzle: When you first open the puzzle box, that's like starting a new project. In version control, this is called creating a "repository." It's the place where all the pictures of your puzzle will be stored.
+
+![](images/puzzle-box.jpg){height=500 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**Commits**) - Adding Pieces: Every time you and your friends add some pieces to the puzzle and are happy with how it looks, you take a picture. In version control, this picture is called a "commit." It's a snapshot of how everything looks at that moment.
+
+![](images/puzzle-in-progress.jpg){height=500 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**Branches**) - Trying New Things: Sometimes, you might want to try putting together a part of the puzzle without messing up what you've already done. You can take the current picture and make a copy to work on. This is called a "branch." If you like what you've done in the branch, you can add it back to the main puzzle. If not, you can just throw that copy away.
+
+![](images/puzzle-branch.jpg){height=500 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**Collaboration**) - Working with Friends: Version control lets you and your friends work on the puzzle together without getting in each other's way. You can all take turns adding pieces and taking pictures, and if someone makes a mistake, you can always look at the previous pictures to see what went wrong.
+
+![](images/puzzle-in-collab.jpg){height=500 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**History**) - Going Back in Time: If you ever want to see how the puzzle looked at any earlier stage, you can look at the pictures you've taken along the way. This is the "history" in version control, and it lets you go back in time to see how things have changed.
+
+![](images/puzzle-history.jpg){height=400 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
 (**Backup**) - Keeping Everything Safe: If something happens to the puzzle, like if your little sibling messes it up, you still have all the pictures you've taken. You can use those pictures to put the puzzle back the way it was.
+
+![](images/puzzle-backup.jpg){height=500 fig-align="center"}
 :::
 
 :::{.fragment .fade-in-then-out .absolute top=400}
@@ -287,6 +299,17 @@ This command will install all the packages and versions specified in the `renv.l
 ## Let's get our hands dirty...again
 
 Let's install `renv` into our recipes repository to add some isolation and improve our reproducibility.
+
+## Thank You's
+
+- First of all, everyone for listening/participating
+- SoCal RUG and Organizers for having me
+- Developers behind these wonderful tools
+  - Linus Torvalds, Junio Hamano, et. al. for `Git`
+  - Kevin Ushey and Hadley Wickham for `renv`
+  - The software development community! 
+
+![](https://media0.giphy.com/media/ZfK4cXKJTTay1Ava29/giphy.gif?cid=ecf05e47phg610lp121k3yrti5pg6e21zpfgpy728m9nu5h1&ep=v1_gifs_search&rid=giphy.gif&ct=g){fig-align="center"}
 
 ## Helpful Resources
 

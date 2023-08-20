@@ -1,6 +1,7 @@
 ---
 format: 
   revealjs:
+    embed-resources: true
     theme: ["theme/q-theme.scss"]
     slide-number: c/t
     code-copy: true
